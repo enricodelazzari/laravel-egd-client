@@ -68,10 +68,7 @@
         "laravel": {
             "providers": [
                 "EnricoDeLazzari\\EgdClient\\EgdClientServiceProvider"
-            ],
-            "aliases": {
-                "EgdClient": "EnricoDeLazzari\\EgdClient\\Facades\\EgdClient"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
