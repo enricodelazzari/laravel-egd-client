@@ -6,8 +6,10 @@ use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http as LaravelHttp;
 use Illuminate\Support\Stringable;
 
-class Http
+abstract class Http
 {
+    abstract protected function getMethod(): string;
+
     protected function baseUrl(): string
     {
         return config('egd-client.base_url');
@@ -25,11 +27,6 @@ class Http
     protected function route(): string
     {
         return '';
-    }
-
-    protected function getMethod(): string
-    {
-        return defined('static::METHOD') ? static::METHOD : 'post';
     }
 
     protected function endpoint(): string
