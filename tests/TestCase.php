@@ -2,9 +2,9 @@
 
 namespace EnricoDeLazzari\EgdClient\Tests;
 
+use EnricoDeLazzari\EgdClient\EgdClientServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use EnricoDeLazzari\EgdClient\EgdClientServiceProvider;
 
 class TestCase extends Orchestra
 {
