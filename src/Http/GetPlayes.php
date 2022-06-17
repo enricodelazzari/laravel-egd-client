@@ -5,7 +5,6 @@ namespace EnricoDeLazzari\EgdClient\Http;
 use DOMDocument;
 use DOMXPath;
 use EnricoDeLazzari\HtmlTableToArray\HtmlTableToArray;
-use Illuminate\Support\Arr;
 
 class GetPlayes extends Http
 {
@@ -54,7 +53,7 @@ class GetPlayes extends Http
     {
         return collect($data)
             ->map(fn ($item) => collect($item)->mapWithKeys(fn ($value, $key) => [
-                $this->formatKey($key) => $this->formatValue($value)
+                $this->formatKey($key) => $this->formatValue($value),
             ]))
             ->toArray();
     }
