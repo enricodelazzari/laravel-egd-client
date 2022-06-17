@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace EnricoDeLazzari\EgdClient\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class EgdClientCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-egd-client';
 
     public $description = 'My command';
 

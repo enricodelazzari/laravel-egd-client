@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "enricodelazzari/laravel-egd-client",
+    "description": "This is my package laravel-egd-client",
     "keywords": [
-        ":vendor_name",
+        "enricodelazzari",
         "laravel",
-        ":package_slug"
+        "laravel-egd-client"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/enricodelazzari/laravel-egd-client",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Enrico De Lazzari",
+            "email": "enrico.delazzari@h-farm.com",
             "role": "Developer"
         }
     ],
@@ -35,13 +35,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "EnricoDeLazzari\\EgdClient\\": "src",
+            "EnricoDeLazzari\\EgdClient\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "EnricoDeLazzari\\EgdClient\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -56,10 +56,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "EnricoDeLazzari\\EgdClient\\EgdClientServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "EgdClient": "EnricoDeLazzari\\EgdClient\\Facades\\EgdClient"
             }
         }
     },
