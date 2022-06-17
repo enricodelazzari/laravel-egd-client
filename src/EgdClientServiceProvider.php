@@ -2,9 +2,9 @@
 
 namespace EnricoDeLazzari\EgdClient;
 
+use EnricoDeLazzari\EgdClient\Commands\EgdClientCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use EnricoDeLazzari\EgdClient\Commands\EgdClientCommand;
 
 class EgdClientServiceProvider extends PackageServiceProvider
 {
