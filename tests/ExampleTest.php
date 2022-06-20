@@ -1,9 +1,9 @@
 <?php
 
-use EnricoDeLazzari\EgdClient\Http\GetPlayes;
+use EnricoDeLazzari\EgdClient\Http\GetPlayerByPinFromApi;
 
 it('can test', function () {
-    $data = (new GetPlayes())();
+    $data = (new GetPlayerByPinFromApi())();
 
     dd($data);
 
