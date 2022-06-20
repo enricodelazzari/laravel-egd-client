@@ -2,11 +2,7 @@
 
 namespace EnricoDeLazzari\EgdClient\Http;
 
-use DOMDocument;
 use DOMNodeList;
-use DOMXPath;
-use EnricoDeLazzari\HtmlTableToArray\HtmlTableToArray;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 class GetPlayerByPinFromApi extends Http
