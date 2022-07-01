@@ -21,10 +21,8 @@ class GetPlayerByPinFromHtml extends Http
         return 'Player_Card.php';
     }
 
-    public function __invoke(): array
+    public function __invoke(int|string $pin): array
     {
-        $pin = '13049520';
-
         $body = $this->send([
             'form_params' => [
                 'key' => $pin,
