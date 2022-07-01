@@ -8,7 +8,6 @@ use EnricoDeLazzari\HtmlTableToArray\HtmlTableToArray;
 
 class GetTournamentsByPlayerPin extends Http
 {
-
     protected function getMethod(): string
     {
         return 'POST';

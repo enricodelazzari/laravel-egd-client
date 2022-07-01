@@ -1,11 +1,11 @@
 <?php
 
-use EnricoDeLazzari\EgdClient\Http\GetPlayerByPinFromApi;
+use EnricoDeLazzari\EgdClient\Http\GetPlayerByPin;
 
 it('can test', function () {
-    $data = (new GetPlayerByPinFromApi())();
-
-    dd($data);
+//    $data = (new GetPlayerByPin())();
+//
+//    dd($data);
 
     expect(true)->toBeTrue();
 });
