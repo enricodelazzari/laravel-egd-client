@@ -1,9 +1,7 @@
 <?php
 
-use EnricoDeLazzari\EgdClient\Http\GetPlayerByPin;
-
 it('can test', function () {
-//    $data = (new GetPlayerByPin())();
+//    $data = (new \EnricoDeLazzari\EgdClient\Http\GetPlayers())();
 //
 //    dd($data);
 

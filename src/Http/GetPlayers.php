@@ -7,7 +7,7 @@ use DOMXPath;
 use EnricoDeLazzari\EgdClient\Actions\FormatAction;
 use EnricoDeLazzari\HtmlTableToArray\HtmlTableToArray;
 
-class GetPlayes extends Http
+class GetPlayers extends Http
 {
     protected function getMethod(): string
     {
@@ -48,7 +48,7 @@ class GetPlayes extends Http
             '//th[@class="EGD_tabella_player"]//parent::table'
         );
 
-        return app(FormatAction::class)(
+        return FormatAction::items(
             HtmlTableToArray::fromDOMNodeList($tables)->make()
         );
     }

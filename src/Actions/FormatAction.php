@@ -17,4 +17,15 @@ class FormatAction
             ->merge($merge)
             ->toArray();
     }
+
+    public static function items(
+        array $data,
+        array $except = []
+    ): array {
+        return collect($data)
+            ->map(
+                fn ($data) => (new self())($data)
+            )
+            ->toArray();
+    }
 }
