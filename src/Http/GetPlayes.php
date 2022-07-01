@@ -4,6 +4,7 @@ namespace EnricoDeLazzari\EgdClient\Http;
 
 use DOMDocument;
 use DOMXPath;
+use EnricoDeLazzari\EgdClient\Actions\FormatAction;
 use EnricoDeLazzari\HtmlTableToArray\HtmlTableToArray;
 
 class GetPlayes extends Http
@@ -47,35 +48,8 @@ class GetPlayes extends Http
             '//th[@class="EGD_tabella_player"]//parent::table'
         );
 
-        return $this->format(
+        return app(FormatAction::class)(
             HtmlTableToArray::fromDOMNodeList($tables)->make()
         );
-    }
-
-    protected function format(array $data): array
-    {
-        return collect($data)
-            ->map(fn ($item) => collect($item)->mapWithKeys(fn ($value, $key) => [
-                $this->formatKey($key) => $this->formatValue($value),
-            ]))
-            ->toArray();
-    }
-
-    protected function formatKey(string $key): string
-    {
-        return str($key)
-            ->trim()
-            ->slug('_')
-            ->lower()
-            ->toString();
-    }
-
-    protected function formatValue(string|array|null $value): ?string
-    {
-        if (is_array($value)) {
-            return $value[0] ?? null;
-        }
-
-        return $value;
     }
 }

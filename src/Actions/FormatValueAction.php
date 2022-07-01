@@ -11,7 +11,7 @@ class FormatValueAction
         }
 
         if (! is_string($value)) {
-            return $value;
+            return null;
         }
 
         $value = trim($value);
