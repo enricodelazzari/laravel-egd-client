@@ -19,12 +19,15 @@ class GetPlayers extends Http
         return 'Find_Player.php';
     }
 
-    public function __invoke(): array
-    {
+    public function __invoke(
+        string $countryCode = '*',
+        int $page = 0
+    ): array {
         $body = $this->send([
             'form_params' => [
                 'ricerca' => true,
-                'country_code' => 'it',
+                'country_code' => $countryCode,
+                'viewStart' => "viewStart={$page}",
 
                 // orderBy: orderBy=Last_Name
                 // viewStart: viewStart=0
